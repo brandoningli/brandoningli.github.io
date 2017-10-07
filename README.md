@@ -4,8 +4,7 @@ Brandon is currently a Computer Science student at Truman State University in Ki
 ## Repositories
 
 ### Truman Classwork Samples
-*Coming Soon*  
-
+[Visit the `truman-coursework-samples` repository to see samples from my coursework at Truman State University.](https://mrbmi513.github.io/truman-coursework-samples/)
 ### Independent Projects
 + [groupme-chat-tools](https://github.com/mrbmi513/groupme-chat-tools) - A collection of Python scripts interfacing with the GroupMe API
 + [truman-laundry-monitor](https://github.com/mrbmi513/truman-laundry-monitor) - A project that was never actually implemented, but designed to provide students with a dashboard for the dormitory laundry room, including alerts for the end of a cycle.
