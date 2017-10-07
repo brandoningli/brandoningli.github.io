@@ -1,0 +1,101 @@
+<html>
+    <head>
+       <meta charset="UTF-8">
+        <title>Universal Tuner</title>
+        <style>
+            button{
+                display: inline;
+                background-color:#888888;
+                color: black;
+                font-size: 18px;
+                border-radius:10px;
+                height: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                width:100%;
+            }
+            table, tr, td{
+              margin-left: auto;
+              margin-right: auto;
+              text-align: center;
+            }
+            #stop {
+                background-color: #BB6666;
+            }
+            #start {
+                background-color: #7ebb65;
+            }
+            #reset {
+                background-color: #bba864;
+            }
+            #container {
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-family: sans-serif;
+            }
+        </style>        <script>
+
+                var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                var oscillator = audioCtx.createOscillator();
+                var gainNode = audioCtx.createGain();
+                var halfaway = 0;
+                var idx = 0;
+                var noteNames = ["A", "A#/Bb", "B", "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab"];
+
+                oscillator.type = 'triangle';
+                oscillator.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
+                gainNode.gain.value = 0;
+                oscillator.start();
+                function makeTuner() {
+                    var pitch = 440*Math.pow(1.05946309436, halfaway);
+                    oscillator.frequency.value = pitch;
+                    if(idx < 0) idx = 11;
+                    if(idx > 11) idx = 0;
+                    document.getElementById('val').innerHTML = noteNames[idx] + "<br>" + Math.round(pitch * 100) / 100 + "Hz";
+                }
+                function dnhalf(){
+                  halfaway -= 1;
+                  idx -= 1;
+                  makeTuner();
+                }
+                function uphalf(){
+                  halfaway += 1;
+                  idx += 1;
+                  makeTuner();
+                }
+                function dnoct(){
+                  halfaway -= 12;
+                  makeTuner();
+                }
+                function upoct(){
+                  halfaway += 12;
+                  makeTuner();
+                }
+                function resetTone(){
+                  halfaway = 0;
+                  idx = 0;
+                  makeTuner();
+                }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+          <center>
+            <h1>Tuner</h1>
+            <div id="val">A<br>440Hz</div>
+            <table>
+            <tr><td colspan="2"><button id="start" onclick="gainNode.gain.value=1;">Start</button></td></tr>
+            <tr><td><button onclick="uphalf();">Step Up 1/2 Step</button></td><td><button onclick="upoct();">Step Up Octave</button></td></tr>
+            <tr><td><button onclick="dnhalf();">Step Down 1/2 Step</button></td><td><button onclick="dnoct();">Step Down Octave</button></td></tr>
+            <tr><td colspan="2"><button id="reset" onclick="resetTone();">Reset to "A" (440Hz)</button></td></tr>
+            <tr><td colspan="2"><button id="stop" onclick="gainNode.gain.value=0;">Stop</button></td></tr></table>
+            <p>Compatible with basically everything but internet explorer</p>
+            <p><a href="https://github.com/mrbmi513/mrbmi513.github.io/blob/master/tuner/index.html">View on GitHub</a></p>
+          </center>
+        </div>
+    </body>
+</html>

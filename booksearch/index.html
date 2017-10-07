@@ -1,0 +1,110 @@
+<HTML>
+  <head>
+    <title>Truman Textbook Search</title>
+    <script type="text/javascript">
+    function loadISBN(){
+      var isbn_no = String(document.getElementById("isbn").value).trim();
+
+      //Truman Bookstore
+      document.getElementById("truman").href = "http://www.bkstr.com/webapp/wcs/stores/servlet/NavigationSearch?searchTerm="+isbn_no+"&categoryId=10001&storeId=213405&catalogId=10001&langId=-1&pageSize=40&beginIndex=0&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&searchSource=Q&pageView=&dtmSearchTracking=internal+search&dtmUserEnteredSearchTerm="+isbn_no+"&dtmTypeAheadSuggestion=&dtmPreSearchDepartmentFilter=Books";
+
+      //Amazon
+      document.getElementById("amazon").href = "http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Dstripbooks&field-keywords="+isbn_no;
+
+      //AbeBooks
+      document.getElementById("abebooks").href = "http://www.abebooks.com/servlet/SearchResults?sts=t&an=&tn=&kn=&isbn="+isbn_no;
+
+      //Thriftbooks
+      document.getElementById("thriftbooks").href = "http://www.thriftbooks.com/browse/?b.search="+isbn_no+"#b.oos";
+
+      //Chegg
+      document.getElementById("chegg").href = "http://chegg.com/search/"+isbn_no;
+
+      //Reveal Search
+      document.getElementById("search").style.display = "block";
+    }
+    function resetSite(){
+      var elements = document.getElementsByTagName("input");
+      for (var ii=0; ii < elements.length; ii++) {
+          if (elements[ii].type == "text") {
+            elements[ii].value = "";
+          }
+        }
+      elements = document.getElementsByTagName("textarea");
+      for(var ii = 0; ii < elements.length; ii++){
+        elements[ii].value = "";
+      }
+
+      document.getElementById("search").style.display = "none";
+    }
+
+    function printMe(){
+      document.getElementById('launch').style.display="none";
+      document.getElementById('reset').style.display="none";
+      document.getElementById('print').style.display="none";
+      document.getElementById('set').style.display="none";
+      window.print();
+      document.getElementById('launch').style.display="inline";
+      document.getElementById('reset').style.display="inline";
+      document.getElementById('print').style.display="inline";
+      document.getElementById('set').style.display="inline";
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet" />
+    <style>
+    body{
+      font-family: "News Cycle", sans-serif;
+      text-align: center;
+      font-size: large;
+      background-color: #4A1566;
+      color: white;
+    }
+    table, tr, td{
+      border: 2px solid #C3B48B;
+      padding: 7px;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: medium;
+      color: black;
+    }
+    th{
+      background-color: #F0F0EB;
+    }
+    td{
+      background-color: #BCBCB7;
+    }
+    a{
+      color: #F0F0EB;
+    }
+    </style>
+  </head>
+  <body>
+      <h1>Truman Textbook Search</h1>
+
+      <h2>What Book(s) Are Required?</h2>
+      <a href="http://www.bkstr.com/trumanstatestore/shop/textbooks-and-course-materials?cm_sp=Global-_-ShipStripTextbooks80-_-1248" target="_blank"><input type="button" id="launch" value="Launch Truman Bookstore Course Search" /></a><br><br>
+      ISBN:  <input type="text" id="isbn" name="isbn" size="16" /><br><br>
+      <input type="button" id="set" name="set" onclick="loadISBN()" value="Set ISBN" />
+
+      <div id="search" style="display: none;">
+      <h2>Search For Your Book</h2>
+      Click the name of each storefront to search. Use the text fields next to each website to take notes. Notes may not save if you refresh or close this page.<br><br>
+      <center>
+      <table><tr><th>Storefront</th><th>New</th><th>Used</th><th>Rental</th><th>Digital - Buy</th><th>Digital - Rental</th><th>Notes</th></tr>
+        <tr><td><a id="truman" href="" target="_blank">Truman Bookstore</a></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><textarea></textarea></td></tr>
+        <tr><td><a id="amazon" href="" target="_blank">Amazon</a></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td></td><td><input type="text" size="10" /></td><td><textarea></textarea></td></tr>
+        <tr><td><a id="abebooks" href="" target="_blank">AbeBooks</a></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><textarea></textarea></td></tr>
+        <tr><td><a id="chegg" href="" target="_blank">Chegg</a></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><textarea></textarea></td></tr>
+        <tr><td><a id="thriftbooks" href="" target="_blank">Thriftbooks</a></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><textarea></textarea></td></tr>
+        <tr><td><a id="discounttextbookstsu" href="http://discounttextbookst.wixsite.com/discounttextbooks" target="_blank">Discount Textbooks TSU</a></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><input type="text" size="10" /></td><td><textarea></textarea></td></tr>
+        <tr><td><a id="trutxt" href="http://trutxt.net" target="_blank">TruTxt</a></td><td></td><td></td><td></td><td></td><td></td><td><textarea></textarea></td></tr>
+      </table></center> <br>
+      <input type="button" value="Reset" id="reset" onclick="resetSite()" /><br><br>
+      <input type="button" value="Print" id="print" onclick="printMe()"><br><br>
+      </div>
+      <hr>
+      <font size="2">2017 Brandon Ingli. Not affiliated with nor endorsed by Truman State University. Not affiliated with nor endorsed by any of the marketplaces linked on this page.<br><br>
+                     To request a new site to be added, <a href="https://github.com/mrbmi513/mrbmi513.github.io/issues">file an issue on my github.io repository.</a>
+      </font>
+  </body>
+</HTML>
