@@ -1,4 +1,4 @@
-## About Brandon
+## Welcome!
 Brandon is currently a Computer Science student at Truman State University in Kirksville, Missouri. To learn more, [visit his website](https://brandoningli.com).
 
 ## Repositories
