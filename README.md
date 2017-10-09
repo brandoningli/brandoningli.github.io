@@ -13,5 +13,5 @@ Visit the [`truman-coursework-samples`](https://mrbmi513.github.io/truman-course
 + [slack-web-integrations](https://mrbmi513.github.io/slack-web-integrations/) - A very basic tutorial into very basic web integrations in [Slack](https://slack.com/)
 
 ### A Look Back
-+ [Webster-U-HS-Programming-Challenge](https://github.com/mrbmi513/Webster-U-HS-Programming-Challenge) - Practice leading up to my participation in Webster University's (St. Louis) High School Programming Challenge. My team, "Fuzzy Logic", took home 8th place of over 20 teams.
++ [Webster-U-HS-Programming-Challenge](https://github.com/mrbmi513/Webster-U-HS-Programming-Challenge) - Practice leading up to my participation in Webster University's (St. Louis) High School Programming Challenge. My team, "Fuzzy Logic", took home 9th place of over 20 teams.
 + [CPlusPlus-Final-Project](https://github.com/mrbmi513/CPlusPlus-Final-Project) - The result of my final project in the C++ course I took my Senior year of high school: learn something new. I taught a friend some Python.
