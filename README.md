@@ -7,6 +7,7 @@ Brandon is currently a Computer Science student at Truman State University in Ki
 *Coming Soon*
 ### Independent Projects
 + [groupme-chat-tools](https://github.com/mrbmi513/groupme-chat-tools) - A collection of Python scripts interfacing with the GroupMe API
++ [its-point-tracker](https://github.com/mrbmi513/its-point-tracker) - A system based on Google Apps to keep track of an analyze International Thespian Society points.  
 + [truman-laundry-monitor](https://github.com/mrbmi513/truman-laundry-monitor) - A project that was never actually implemented, but designed to provide students with a dashboard for the dormitory laundry room, including alerts for the end of a cycle.
 + [Truman Textbook Search](https://mrbmi513.github.io/booksearch) - A tool for Truman students to compare textbook prices.
 + [Tuner](https://mrbmi513.github.io/tuner) - A JS based Tuner / Tone generator.
