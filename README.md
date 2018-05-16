@@ -3,8 +3,6 @@ Brandon is currently a Computer Science student at Truman State University in Ki
 
 ## Repositories
 
-### Truman Classwork Samples
-*Coming Soon*
 ### Independent Projects
 + [groupme-chat-tools](https://github.com/mrbmi513/groupme-chat-tools) - A collection of Python scripts interfacing with the GroupMe API
 + [its-point-tracker](https://mrbmi513.github.io/its-point-tracker) - A system based on Google Apps to keep track of an analyze International Thespian Society points.  
