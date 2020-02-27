@@ -1,3 +1,5 @@
+# Raspberry Pi as Digital Signage
+
 **Note:** I do not claim to be a Linux expert, so some of these may not be the "proper" way of doing things, but they worked for me in a digital signage type project.
 
 1. Make sure the pi automatically launches the DE. It may be beneficial to have it automatically log in on boot as well. You can do that via `sudo raspi-config` and following the graphical prompts.
