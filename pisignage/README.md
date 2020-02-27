@@ -2,10 +2,10 @@
 
 **Note:** I do not claim to be a Linux expert, so some of these may not be the "proper" way of doing things, but they worked for me in a digital signage type project.
 
-1) Make sure the pi automatically launches the DE. It may be beneficial to have it automatically log in on boot as well. You can do that via `sudo raspi-config` and following the graphical prompts.
-2) To hide the mouse cursor after a period of time, you'll need the `unclutter` package: `sudo apt-get install unclutter`
-3) Disable the automatic screen blanking due to input inactivity. [This HackLAB article](https://www.geeks3d.com/hacklab/20160108/how-to-disable-the-blank-screen-on-raspberry-pi-raspbian/) provides a few ways to do this depending on the version of raspbian you're running.
-4) If you're planning on running the server locally, of course you'll need to install and configure that.
+1) Make sure the pi automatically launches the DE. It may be beneficial to have it automatically log in on boot as well. You can do that via `sudo raspi-config` and following the graphical prompts.  
+2) To hide the mouse cursor after a period of time, you'll need the `unclutter` package: `sudo apt-get install unclutter`  
+3) Disable the automatic screen blanking due to input inactivity. [This HackLAB article](https://www.geeks3d.com/hacklab/20160108/  how-to-disable-the-blank-screen-on-raspberry-pi-raspbian/) provides a few ways to do this depending on the version of raspbian you're running.  
+4) If you're planning on running the server locally, of course you'll need to install and configure that.  
 5) Configure `unclutter` to run when the user logs in to the desktop. Put the following desktop launcher (`unclutter.desktop`) in `~/.config/autostart` to hide the mouse pointer after one second of inactivity:
 
 ```
